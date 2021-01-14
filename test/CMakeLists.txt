@@ -6,9 +6,11 @@ SET(CMAKE_CXX_STANDARD 17)
 project(main)
 
 SET(TSRC 
-	../formatter.cpp
-	../event.cpp
 	../util.cpp
+	../event.cpp
+	../formatter.cpp
+	../appender.cpp
+	../logger.cpp
 )
 
-add_executable(${PROJECT_NAME} ./main.cpp ${TSRC})
+add_executable(${PROJECT_NAME} ./pares.cpp ${TSRC})

@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/lzc/my/Log/appender.h
+type.h
+/lzc/my/Log/type.h
+event.h
+/lzc/my/Log/event.h
+formatter.h
+/lzc/my/Log/formatter.h
+mutex
+-
+
 /lzc/my/Log/event.h
 type.h
 /lzc/my/Log/type.h
@@ -20,13 +30,41 @@ util.h
 functional
 -
 
-/lzc/my/Log/test/main.cpp
-../formatter.h
+/lzc/my/Log/log.h
+type.h
+/lzc/my/Log/type.h
+event.h
+/lzc/my/Log/event.h
+formatter.h
 /lzc/my/Log/formatter.h
-iostream
+appender.h
+/lzc/my/Log/appender.h
+logger.h
+/lzc/my/Log/logger.h
+
+/lzc/my/Log/logger.cpp
+logger.h
+/lzc/my/Log/logger.h
+
+/lzc/my/Log/logger.h
+type.h
+/lzc/my/Log/type.h
+event.h
+/lzc/my/Log/event.h
+appender.h
+/lzc/my/Log/appender.h
+forward_list
 -
 
+/lzc/my/Log/test/pares.cpp
+../log.h
+/lzc/my/Log/log.h
+
 /lzc/my/Log/type.h
+iostream
+-
+fstream
+-
 string
 -
 sstream

@@ -123,6 +123,33 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+lzc/my/Log/appender.o: lzc/my/Log/appender.cpp.o
+
+.PHONY : lzc/my/Log/appender.o
+
+# target to build an object file
+lzc/my/Log/appender.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/appender.cpp.o
+.PHONY : lzc/my/Log/appender.cpp.o
+
+lzc/my/Log/appender.i: lzc/my/Log/appender.cpp.i
+
+.PHONY : lzc/my/Log/appender.i
+
+# target to preprocess a source file
+lzc/my/Log/appender.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/appender.cpp.i
+.PHONY : lzc/my/Log/appender.cpp.i
+
+lzc/my/Log/appender.s: lzc/my/Log/appender.cpp.s
+
+.PHONY : lzc/my/Log/appender.s
+
+# target to generate assembly for a file
+lzc/my/Log/appender.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/appender.cpp.s
+.PHONY : lzc/my/Log/appender.cpp.s
+
 lzc/my/Log/event.o: lzc/my/Log/event.cpp.o
 
 .PHONY : lzc/my/Log/event.o
@@ -177,6 +204,33 @@ lzc/my/Log/formatter.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/formatter.cpp.s
 .PHONY : lzc/my/Log/formatter.cpp.s
 
+lzc/my/Log/logger.o: lzc/my/Log/logger.cpp.o
+
+.PHONY : lzc/my/Log/logger.o
+
+# target to build an object file
+lzc/my/Log/logger.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/logger.cpp.o
+.PHONY : lzc/my/Log/logger.cpp.o
+
+lzc/my/Log/logger.i: lzc/my/Log/logger.cpp.i
+
+.PHONY : lzc/my/Log/logger.i
+
+# target to preprocess a source file
+lzc/my/Log/logger.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/logger.cpp.i
+.PHONY : lzc/my/Log/logger.cpp.i
+
+lzc/my/Log/logger.s: lzc/my/Log/logger.cpp.s
+
+.PHONY : lzc/my/Log/logger.s
+
+# target to generate assembly for a file
+lzc/my/Log/logger.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/logger.cpp.s
+.PHONY : lzc/my/Log/logger.cpp.s
+
 lzc/my/Log/util.o: lzc/my/Log/util.cpp.o
 
 .PHONY : lzc/my/Log/util.o
@@ -204,32 +258,32 @@ lzc/my/Log/util.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/util.cpp.s
 .PHONY : lzc/my/Log/util.cpp.s
 
-main.o: main.cpp.o
+pares.o: pares.cpp.o
 
-.PHONY : main.o
+.PHONY : pares.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+pares.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pares.cpp.o
+.PHONY : pares.cpp.o
 
-main.i: main.cpp.i
+pares.i: pares.cpp.i
 
-.PHONY : main.i
+.PHONY : pares.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+pares.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pares.cpp.i
+.PHONY : pares.cpp.i
 
-main.s: main.cpp.s
+pares.s: pares.cpp.s
 
-.PHONY : main.s
+.PHONY : pares.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+pares.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pares.cpp.s
+.PHONY : pares.cpp.s
 
 # Help Target
 help:
@@ -238,20 +292,26 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... main"
 	@echo "... edit_cache"
+	@echo "... main"
+	@echo "... lzc/my/Log/appender.o"
+	@echo "... lzc/my/Log/appender.i"
+	@echo "... lzc/my/Log/appender.s"
 	@echo "... lzc/my/Log/event.o"
 	@echo "... lzc/my/Log/event.i"
 	@echo "... lzc/my/Log/event.s"
 	@echo "... lzc/my/Log/formatter.o"
 	@echo "... lzc/my/Log/formatter.i"
 	@echo "... lzc/my/Log/formatter.s"
+	@echo "... lzc/my/Log/logger.o"
+	@echo "... lzc/my/Log/logger.i"
+	@echo "... lzc/my/Log/logger.s"
 	@echo "... lzc/my/Log/util.o"
 	@echo "... lzc/my/Log/util.i"
 	@echo "... lzc/my/Log/util.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... pares.o"
+	@echo "... pares.i"
+	@echo "... pares.s"
 .PHONY : help
 
 

@@ -1,21 +1,12 @@
-#include <iostream>
-#include <ostream>
-#include <string>
-#include <sstream>
+#include "../log.h"	
 
-void pares(std::ostream& os,std::string& str) {
-	enum statu {
-		SYMBOL_START,
-	};
-	for(char& ch : str) {
-		
-	}
-}
+int main(int argc, char *argv[]) {
+	
+	fl_logger_t::ptr logger(new Logger("system"));
+	fl_appender_t::ptr console(new ConsoleAppender());
+	logger->addAppender(console);
 
-int main(int argc,char** argv) {
-	std::stringstream ss;
-	std::string pattern{"%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"};	
-	pares(ss,pattern);
+	FL_LOG(logger, fl_level_t::DEBUG) << "sdfsdf";
 	return 0;
 }
 

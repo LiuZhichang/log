@@ -4,10 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/lzc/my/Log/appender.cpp" "/lzc/my/Log/test/CMakeFiles/main.dir/lzc/my/Log/appender.cpp.o"
   "/lzc/my/Log/event.cpp" "/lzc/my/Log/test/CMakeFiles/main.dir/lzc/my/Log/event.cpp.o"
   "/lzc/my/Log/formatter.cpp" "/lzc/my/Log/test/CMakeFiles/main.dir/lzc/my/Log/formatter.cpp.o"
+  "/lzc/my/Log/logger.cpp" "/lzc/my/Log/test/CMakeFiles/main.dir/lzc/my/Log/logger.cpp.o"
   "/lzc/my/Log/util.cpp" "/lzc/my/Log/test/CMakeFiles/main.dir/lzc/my/Log/util.cpp.o"
-  "/lzc/my/Log/test/main.cpp" "/lzc/my/Log/test/CMakeFiles/main.dir/main.cpp.o"
+  "/lzc/my/Log/test/pares.cpp" "/lzc/my/Log/test/CMakeFiles/main.dir/pares.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

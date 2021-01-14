@@ -1,0 +1,25 @@
+#pragma once
+
+#include "type.h"
+#include "event.h"
+#include "appender.h"
+
+class Logger {
+	public:
+		typedef std::shared_ptr<Logger> ptr;
+
+		Logger(const fl_str_t& name = "root");
+
+		void log(fl_level_t level,fl_event_t::ptr event);
+
+		void debug(fl_event_t::ptr event);
+		void info(fl_event_t::ptr event);
+		void warn(fl_event_t::ptr event);
+		void error(fl_event_t::ptr event);
+		void fatal(fl_event_t::ptr event);
+
+		void addAppender(fl_appender_t::ptr appender);
+		void delAppender(fl_appender_t::ptr appender);
+		void clearAppender();
+	private:
+};

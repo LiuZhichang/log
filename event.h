@@ -20,54 +20,33 @@ class LogEvent {
     typedef std::shared_ptr<LogEvent> ptr;
 
     LogEvent(const fl_ev_item& ei);
+	LogEvent(fl_level_t level, const fl_str_t& file, const fl_str_t& funcName
+                   , fl_ui32_t line, fl_ui32_t elapse,fl_ui32_t threadId, fl_ui32_t coroutineId
+                   , fl_ui64_t time, const fl_str_t& threadNmae, const fl_str_t& name);
 
-    const fl_str_t& getFileName() const {
-        return evi.ev_file;
-    }
+    const fl_str_t& getFileName() const; 
 
-    const fl_str_t& getFuncName() const {
-        return evi.ev_func;
-    }
+    const fl_str_t& getFuncName() const; 
 
-    const fl_str_t& getThName() const {
-        return evi.ev_thname;
-    }
+    const fl_str_t& getThName() const; 
 
-    const fl_str_t& getLogName() const {
-        return evi.ev_logname;
-    }
+    const fl_str_t& getLogName() const; 
 
-    fl_ui32_t getLine() const {
-        return evi.ev_line;
-    }
+    fl_ui32_t getLine() const; 
 
-    fl_ui32_t getElapse() const {
-        return evi.ev_elapse;
-    }
+    fl_ui32_t getElapse() const; 
 
-    fl_ui32_t getThid() const {
-        return evi.ev_thid;
-    }
+    fl_ui32_t getThid() const; 
 
-    fl_ui32_t getCoid() const {
-        return evi.ev_coid;
-    }
+    fl_ui32_t getCoid() const; 
 
-    fl_ui64_t getTime() const {
-        return evi.ev_time;
-    }
+    fl_ui64_t getTime() const; 
 
-    fl_level_t getLevel() const {
-        return evi.ev_level;
-    }
+    fl_level_t getLevel() const; 
 
-    const fl_str_t getLogText() const {
-        return sstream.str();
-    }
+    const fl_str_t getLogText() const; 
 
-    fl_sstrem_t& getStrIo() {
-        return sstream;
-    }
+    fl_sstrem_t& getStrIo(); 
 
   private:
 	fl_ev_item  evi;

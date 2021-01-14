@@ -23,17 +23,19 @@ class LogFormatter {
     LogFormatter(const fl_str_t& pattern);
     fl_str_t format(fl_event_t::ptr event);
     fl_ostream_t& format(fl_ostream_t& os, fl_event_t::ptr event);
+	void setPattern(const fl_str_t& pattern);
     fl_str_t getPattern() const {
         return pattern;
     }
     bool addItem(const fl_str_t& key, fl_item_wrapper item);
     bool replace(const fl_str_t& key, fl_item_wrapper item);
-  private:
-    void init();
     void parse();
 
   private:
-    fl_str_t	pattern;
+    void init();
+
+  private:
+	fl_str_t	pattern;
     fl_list_t	items;
     fl_map_t	item_dict;
 };
@@ -86,10 +88,10 @@ class ThreadIdFormatItem : implement FormatItem {
         os << event->getThid();
     }
 };
-class FiberIdFormatItem : implement FormatItem {
+class CoroutineId: implement FormatItem {
   public:
-    FiberIdFormatItem(const std::string& str = "") {}
-    ~FiberIdFormatItem() {}
+    CoroutineId(const std::string& str = "") {}
+    ~CoroutineId() {}
     void format(std::ostream& os
                 , LogEvent::ptr event) override {
         os << event->getCoid();
