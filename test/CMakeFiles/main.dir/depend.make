@@ -30,12 +30,4 @@ CMakeFiles/main.dir/lzc/my/Log/util.cpp.o: /lzc/my/Log/type.h
 CMakeFiles/main.dir/lzc/my/Log/util.cpp.o: /lzc/my/Log/util.cpp
 CMakeFiles/main.dir/lzc/my/Log/util.cpp.o: /lzc/my/Log/util.h
 
-CMakeFiles/main.dir/pares.cpp.o: /lzc/my/Log/appender.h
-CMakeFiles/main.dir/pares.cpp.o: /lzc/my/Log/event.h
-CMakeFiles/main.dir/pares.cpp.o: /lzc/my/Log/formatter.h
-CMakeFiles/main.dir/pares.cpp.o: /lzc/my/Log/log.h
-CMakeFiles/main.dir/pares.cpp.o: /lzc/my/Log/logger.h
-CMakeFiles/main.dir/pares.cpp.o: pares.cpp
-CMakeFiles/main.dir/pares.cpp.o: /lzc/my/Log/type.h
-CMakeFiles/main.dir/pares.cpp.o: /lzc/my/Log/util.h
 

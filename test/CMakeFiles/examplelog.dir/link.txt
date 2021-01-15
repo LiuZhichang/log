@@ -1,0 +1,1 @@
+/usr/local/share/gcc-10.2/bin/c++    -rdynamic CMakeFiles/examplelog.dir/examplelog.cpp.o CMakeFiles/examplelog.dir/lzc/my/Log/util.cpp.o CMakeFiles/examplelog.dir/lzc/my/Log/event.cpp.o CMakeFiles/examplelog.dir/lzc/my/Log/formatter.cpp.o CMakeFiles/examplelog.dir/lzc/my/Log/appender.cpp.o CMakeFiles/examplelog.dir/lzc/my/Log/logger.cpp.o  -o /lzc/my/Log/build/examplelog 

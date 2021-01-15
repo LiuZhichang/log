@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = /lzc/my/Log/test
 CMAKE_BINARY_DIR = /lzc/my/Log/test
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/examplelog.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/lzc/my/Log/test/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/examplelog.dir/all:
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/depend
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/lzc/my/Log/test/CMakeFiles --progress-num=1,2,3,4,5,6,7 "Built target examplelog"
+.PHONY : CMakeFiles/examplelog.dir/all
 
 # Include target in all.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/examplelog.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
+CMakeFiles/examplelog.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /lzc/my/Log/test/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/examplelog.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /lzc/my/Log/test/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/examplelog.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
+examplelog: CMakeFiles/examplelog.dir/rule
 
-.PHONY : main
-
-# clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+.PHONY : examplelog
 
 # clean rule for target.
-clean: CMakeFiles/main.dir/clean
+CMakeFiles/examplelog.dir/clean:
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/clean
+.PHONY : CMakeFiles/examplelog.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/examplelog.dir/clean
 
 .PHONY : clean
 

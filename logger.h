@@ -11,6 +11,32 @@
 						level,__FILE__,__func__,__LINE__,0,0,0,time(0),"null",logger->getName() \
 						)))).getStrIo()
 
+#define FL_LOGGER(name) \
+	fl_logger_t::ptr(new fl_logger_t(#name))
+
+#define FL_LOG_DEBUG(logger) \
+	FL_LOG(logger,fl_level_t::DEBUG)
+
+#define FL_LOG_INFO(logger)	\
+	FL_LOG(logger,fl_level_t::INFO)
+
+#define FL_LOG_WARN(logger)	\
+	FL_LOG(logger,fl_level_t::WARN)
+
+#define FL_LOG_ERROR(logger)	\
+	FL_LOG(logger,fl_level_t::ERROR)
+
+#define FL_LOG_FATAL(logger)	\
+	FL_LOG(logger,fl_level_t::FATAL)
+
+inline	fl_appender_t::ptr fl_ConsoleLog() {
+	return LogAppender::ptr(new ConsoleAppender());
+}
+
+inline fl_appender_t::ptr fl_FileLog(const std::string& name) {
+	return LogAppender::ptr(new FileAppender(name));
+}
+
 class Logger {
 	typedef std::forward_list<fl_appender_t::ptr> fl_flist_t;
 	public:

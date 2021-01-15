@@ -111,17 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named examplelog
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+examplelog: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 examplelog
+.PHONY : examplelog
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+examplelog/fast:
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/build
+.PHONY : examplelog/fast
+
+examplelog.o: examplelog.cpp.o
+
+.PHONY : examplelog.o
+
+# target to build an object file
+examplelog.cpp.o:
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/examplelog.cpp.o
+.PHONY : examplelog.cpp.o
+
+examplelog.i: examplelog.cpp.i
+
+.PHONY : examplelog.i
+
+# target to preprocess a source file
+examplelog.cpp.i:
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/examplelog.cpp.i
+.PHONY : examplelog.cpp.i
+
+examplelog.s: examplelog.cpp.s
+
+.PHONY : examplelog.s
+
+# target to generate assembly for a file
+examplelog.cpp.s:
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/examplelog.cpp.s
+.PHONY : examplelog.cpp.s
 
 lzc/my/Log/appender.o: lzc/my/Log/appender.cpp.o
 
@@ -129,7 +156,7 @@ lzc/my/Log/appender.o: lzc/my/Log/appender.cpp.o
 
 # target to build an object file
 lzc/my/Log/appender.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/appender.cpp.o
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/appender.cpp.o
 .PHONY : lzc/my/Log/appender.cpp.o
 
 lzc/my/Log/appender.i: lzc/my/Log/appender.cpp.i
@@ -138,7 +165,7 @@ lzc/my/Log/appender.i: lzc/my/Log/appender.cpp.i
 
 # target to preprocess a source file
 lzc/my/Log/appender.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/appender.cpp.i
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/appender.cpp.i
 .PHONY : lzc/my/Log/appender.cpp.i
 
 lzc/my/Log/appender.s: lzc/my/Log/appender.cpp.s
@@ -147,7 +174,7 @@ lzc/my/Log/appender.s: lzc/my/Log/appender.cpp.s
 
 # target to generate assembly for a file
 lzc/my/Log/appender.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/appender.cpp.s
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/appender.cpp.s
 .PHONY : lzc/my/Log/appender.cpp.s
 
 lzc/my/Log/event.o: lzc/my/Log/event.cpp.o
@@ -156,7 +183,7 @@ lzc/my/Log/event.o: lzc/my/Log/event.cpp.o
 
 # target to build an object file
 lzc/my/Log/event.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/event.cpp.o
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/event.cpp.o
 .PHONY : lzc/my/Log/event.cpp.o
 
 lzc/my/Log/event.i: lzc/my/Log/event.cpp.i
@@ -165,7 +192,7 @@ lzc/my/Log/event.i: lzc/my/Log/event.cpp.i
 
 # target to preprocess a source file
 lzc/my/Log/event.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/event.cpp.i
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/event.cpp.i
 .PHONY : lzc/my/Log/event.cpp.i
 
 lzc/my/Log/event.s: lzc/my/Log/event.cpp.s
@@ -174,7 +201,7 @@ lzc/my/Log/event.s: lzc/my/Log/event.cpp.s
 
 # target to generate assembly for a file
 lzc/my/Log/event.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/event.cpp.s
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/event.cpp.s
 .PHONY : lzc/my/Log/event.cpp.s
 
 lzc/my/Log/formatter.o: lzc/my/Log/formatter.cpp.o
@@ -183,7 +210,7 @@ lzc/my/Log/formatter.o: lzc/my/Log/formatter.cpp.o
 
 # target to build an object file
 lzc/my/Log/formatter.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/formatter.cpp.o
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/formatter.cpp.o
 .PHONY : lzc/my/Log/formatter.cpp.o
 
 lzc/my/Log/formatter.i: lzc/my/Log/formatter.cpp.i
@@ -192,7 +219,7 @@ lzc/my/Log/formatter.i: lzc/my/Log/formatter.cpp.i
 
 # target to preprocess a source file
 lzc/my/Log/formatter.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/formatter.cpp.i
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/formatter.cpp.i
 .PHONY : lzc/my/Log/formatter.cpp.i
 
 lzc/my/Log/formatter.s: lzc/my/Log/formatter.cpp.s
@@ -201,7 +228,7 @@ lzc/my/Log/formatter.s: lzc/my/Log/formatter.cpp.s
 
 # target to generate assembly for a file
 lzc/my/Log/formatter.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/formatter.cpp.s
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/formatter.cpp.s
 .PHONY : lzc/my/Log/formatter.cpp.s
 
 lzc/my/Log/logger.o: lzc/my/Log/logger.cpp.o
@@ -210,7 +237,7 @@ lzc/my/Log/logger.o: lzc/my/Log/logger.cpp.o
 
 # target to build an object file
 lzc/my/Log/logger.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/logger.cpp.o
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/logger.cpp.o
 .PHONY : lzc/my/Log/logger.cpp.o
 
 lzc/my/Log/logger.i: lzc/my/Log/logger.cpp.i
@@ -219,7 +246,7 @@ lzc/my/Log/logger.i: lzc/my/Log/logger.cpp.i
 
 # target to preprocess a source file
 lzc/my/Log/logger.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/logger.cpp.i
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/logger.cpp.i
 .PHONY : lzc/my/Log/logger.cpp.i
 
 lzc/my/Log/logger.s: lzc/my/Log/logger.cpp.s
@@ -228,7 +255,7 @@ lzc/my/Log/logger.s: lzc/my/Log/logger.cpp.s
 
 # target to generate assembly for a file
 lzc/my/Log/logger.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/logger.cpp.s
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/logger.cpp.s
 .PHONY : lzc/my/Log/logger.cpp.s
 
 lzc/my/Log/util.o: lzc/my/Log/util.cpp.o
@@ -237,7 +264,7 @@ lzc/my/Log/util.o: lzc/my/Log/util.cpp.o
 
 # target to build an object file
 lzc/my/Log/util.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/util.cpp.o
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/util.cpp.o
 .PHONY : lzc/my/Log/util.cpp.o
 
 lzc/my/Log/util.i: lzc/my/Log/util.cpp.i
@@ -246,7 +273,7 @@ lzc/my/Log/util.i: lzc/my/Log/util.cpp.i
 
 # target to preprocess a source file
 lzc/my/Log/util.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/util.cpp.i
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/util.cpp.i
 .PHONY : lzc/my/Log/util.cpp.i
 
 lzc/my/Log/util.s: lzc/my/Log/util.cpp.s
@@ -255,35 +282,8 @@ lzc/my/Log/util.s: lzc/my/Log/util.cpp.s
 
 # target to generate assembly for a file
 lzc/my/Log/util.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/lzc/my/Log/util.cpp.s
+	$(MAKE) -f CMakeFiles/examplelog.dir/build.make CMakeFiles/examplelog.dir/lzc/my/Log/util.cpp.s
 .PHONY : lzc/my/Log/util.cpp.s
-
-pares.o: pares.cpp.o
-
-.PHONY : pares.o
-
-# target to build an object file
-pares.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pares.cpp.o
-.PHONY : pares.cpp.o
-
-pares.i: pares.cpp.i
-
-.PHONY : pares.i
-
-# target to preprocess a source file
-pares.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pares.cpp.i
-.PHONY : pares.cpp.i
-
-pares.s: pares.cpp.s
-
-.PHONY : pares.s
-
-# target to generate assembly for a file
-pares.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/pares.cpp.s
-.PHONY : pares.cpp.s
 
 # Help Target
 help:
@@ -293,7 +293,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... main"
+	@echo "... examplelog"
+	@echo "... examplelog.o"
+	@echo "... examplelog.i"
+	@echo "... examplelog.s"
 	@echo "... lzc/my/Log/appender.o"
 	@echo "... lzc/my/Log/appender.i"
 	@echo "... lzc/my/Log/appender.s"
@@ -309,9 +312,6 @@ help:
 	@echo "... lzc/my/Log/util.o"
 	@echo "... lzc/my/Log/util.i"
 	@echo "... lzc/my/Log/util.s"
-	@echo "... pares.o"
-	@echo "... pares.i"
-	@echo "... pares.s"
 .PHONY : help
 
 

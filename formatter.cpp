@@ -107,22 +107,28 @@ void LogFormatter::parse() {
                         type = TYPE::REGEX;
                         start = i;
                         continue;
+                    } else if(sym != '\0') {
+                        std::string key(1, sym);
+                        auto it = item_dict.find(key);
+                        if(it != item_dict.end())
+                            items.push_back(it->second(""));
+                        items.push_back(FormatItem::ptr(new StringFormatItem("{")));
                     }
                 }
             if(ch == '}' && type == TYPE::REGEX && sym != '\0') {
                 std::string key(1, sym);
                 auto it = item_dict.find(key);
                 if(it != item_dict.end() && start)
-                    items.push_back(it->second(pattern.substr(start + 1, i)));
+                    items.push_back(it->second(pattern.substr(start + 1, i - start - 1)));
                 sym = '\0';
                 start = -1;
                 type = TYPE::PENDING;
                 continue;
             }
-        }
-        if(type != TYPE::REGEX) {
-            std::string tmp(1, ch);
-            items.push_back(FormatItem::ptr(new StringFormatItem(tmp)));
+            if(type != TYPE::REGEX) {
+                std::string tmp(1, ch);
+                items.push_back(FormatItem::ptr(new StringFormatItem(tmp)));
+            }
         }
     }
 }

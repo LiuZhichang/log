@@ -3,7 +3,7 @@
 Logger::Logger(const fl_str_t& name)
     : name(name)
     , level(fl_level_t()) {
-    formatter.reset(new fl_formater_t("[%d{%Y-%m-%d %H:%M:%S}]%T%t%T%N%T%F%T[%p]%T[%c]%T[%f:%l:%w]%T%m%n"));
+    formatter.reset(new fl_formater_t("[%d{%Y-%m-%d %H:%M:%S}]%T%t%T%N%T%F%T[%p]%T<%c>%T[%f:%l:%w]%T%m%n"));
 }
 
 void Logger::log(fl_level_t level, fl_event_t::ptr event) {
